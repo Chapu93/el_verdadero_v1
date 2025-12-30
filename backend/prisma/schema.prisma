@@ -1,0 +1,130 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String        @id @default(cuid())
+  email        String        @unique
+  password     String
+  firstName    String
+  lastName     String
+  phone        String?
+  bio          String?
+  avatar       String?
+  role         String        @default("USER") // ADMIN, USER
+  subscription Subscription?
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  @@map("users")
+}
+
+model Subscription {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  plan        String   @default("FREE") // FREE, PRO
+  storageUsed Int      @default(0) // in MB
+  expiresAt   DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("subscriptions")
+}
+
+model Customer {
+  id               String   @id @default(cuid())
+  name             String
+  email            String   @unique
+  avatar           String?
+  status           String   @default("PENDING") // ACTIVE, PENDING, INACTIVE
+  registrationDate DateTime @default(now())
+  orders           Order[]
+  pages            Page[]
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@map("customers")
+}
+
+model Order {
+  id          String   @id @default(cuid())
+  orderNumber String   @unique
+  customerId  String
+  customer    Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  status      String   @default("PENDING") // PENDING, PROCESSING, COMPLETED, CANCELLED
+  total       Decimal
+  orderDate   DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([customerId])
+  @@index([status])
+  @@index([orderDate])
+  @@map("orders")
+}
+
+// ============================================
+// PAGE BUILDER MODELS
+// ============================================
+
+model Template {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  thumbnail   String?
+  htmlContent String   // HTML structure of the template
+  cssContent  String?  // Custom CSS styles
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  pages       Page[]
+
+  @@map("templates")
+}
+
+model Page {
+  id          String        @id @default(cuid())
+  templateId  String
+  customerId  String
+  name        String
+  slug        String        @unique
+  customCss   String?
+  theme       String? // JSON: { mode, palette, showSections }
+  isPublished Boolean       @default(false)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  template    Template      @relation(fields: [templateId], references: [id])
+  customer    Customer      @relation(fields: [customerId], references: [id])
+  elements    PageElement[]
+
+  @@index([customerId])
+  @@index([templateId])
+  @@index([slug])
+  @@map("pages")
+}
+
+model PageElement {
+  id         String  @id @default(cuid())
+  pageId     String
+  elementKey String  // Unique identifier within the template (e.g., "hero-title", "cta-button")
+  type       String  // TEXT, IMAGE, COLOR, LINK
+  content    String  // The actual value
+  label      String? // Human-readable label for the editor
+
+  page       Page    @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@unique([pageId, elementKey])
+  @@index([pageId])
+  @@map("page_elements")
+}
+
