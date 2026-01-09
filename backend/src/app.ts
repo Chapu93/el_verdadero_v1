@@ -37,9 +37,9 @@ const limiter = rateLimit({
 
 app.use(limiter);
 
-// Body parsing
-app.use(express.json({ limit: '10kb' }));
-app.use(express.urlencoded({ extended: true, limit: '10kb' }));
+// Body parsing - increased limit for large HTML templates
+app.use(express.json({ limit: '5mb' }));
+app.use(express.urlencoded({ extended: true, limit: '5mb' }));
 
 // Health check
 app.get('/health', (_req, res) => {

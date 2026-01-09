@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { AppLayout } from '@/components/layout';
 import { Button, Card, Input, EmptyState, Modal, Skeleton } from '@/components/ui';
@@ -7,6 +8,7 @@ import { useTemplates, templatesApi, Template, CreateTemplateDto } from '../api/
 import { clsx } from 'clsx';
 
 export function TemplatesPage() {
+    const navigate = useNavigate();
     const queryClient = useQueryClient();
     const [page, setPage] = useState(1);
     const [search, setSearch] = useState('');
@@ -194,6 +196,13 @@ export function TemplatesPage() {
                                         >
                                             <span className="material-symbols-outlined text-[16px] mr-1">content_copy</span>
                                             Usar
+                                        </Button>
+                                        <Button
+                                            size="sm"
+                                            variant="outline"
+                                            onClick={() => navigate(`/templates/${template.id}/edit`)}
+                                        >
+                                            <span className="material-symbols-outlined text-[16px]">edit</span>
                                         </Button>
                                         <Button
                                             size="sm"

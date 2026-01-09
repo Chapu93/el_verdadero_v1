@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { DashboardPage } from './features/dashboard';
 import { CustomersPage, CustomerDetailPage } from './features/customers';
 import { OrdersPage } from './features/orders';
-import { TemplatesPage } from './features/templates';
+import { TemplatesPage, TemplateEditorPage } from './features/templates';
 import { PagesPage, PageEditorPage } from './features/pages';
 import { SettingsPage } from './features/settings';
 import { LoginPage } from './features/auth';
@@ -68,6 +68,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <TemplatesPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/templates/:id/edit"
+            element={
+              <ProtectedRoute>
+                <TemplateEditorPage />
               </ProtectedRoute>
             }
           />

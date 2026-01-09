@@ -1,0 +1,511 @@
+/* GrapesJS Custom Theme - Matching Project Styles */
+
+/* ============================================
+   CRITICAL: DO NOT HIDE PANELS ENTIRELY
+   Just restyle them. Hiding breaks functionality.
+   ============================================ */
+
+/* Only hide specific panel buttons we don't need */
+.gjs-pn-devices-c,
+.gjs-pn-options {
+    display: none !important;
+}
+
+/* ============================================
+   EDITOR LAYOUT
+   ============================================ */
+
+/* Main wrapper */
+.grapes-editor-wrapper {
+    background-color: #0f172a;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.grapes-toolbar {
+    background-color: #1e293b;
+    border-bottom: 1px solid #334155;
+    flex-shrink: 0;
+}
+
+/* Editor canvas container */
+.gjs-editor-canvas {
+    flex: 1;
+    position: relative;
+    min-height: 0;
+}
+
+/* GrapesJS Editor - force full dimensions */
+.gjs-editor-canvas .gjs-editor {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden;
+}
+
+/* Editor container layout */
+.gjs-editor-cont {
+    display: flex !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Canvas container - must take remaining space */
+.gjs-cv-canvas {
+    flex: 1 !important;
+    position: relative !important;
+    overflow: hidden !important;
+    background-color: #374151 !important;
+}
+
+/* Frame wrapper - the actual viewport */
+.gjs-cv-canvas .gjs-frame-wrapper {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+}
+
+/* Ensure iframe fills the wrapper */
+.gjs-frame {
+    background: white !important;
+}
+
+/* ============================================
+   THEME COLORS
+   ============================================ */
+
+.gjs-one-bg {
+    background-color: #1e293b !important;
+}
+
+.gjs-two-color {
+    color: #e2e8f0 !important;
+}
+
+.gjs-three-bg {
+    background-color: #334155 !important;
+    color: #e2e8f0 !important;
+}
+
+.gjs-four-color,
+.gjs-four-color-h:hover {
+    color: #3b82f6 !important;
+}
+
+/* ============================================
+   PANELS STYLING (keep visible, just restyle)
+   ============================================ */
+
+.gjs-pn-panels {
+    background-color: transparent !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.gjs-pn-panel {
+    background-color: transparent !important;
+}
+
+.gjs-pn-btn {
+    color: #94a3b8 !important;
+    border-radius: 6px !important;
+    margin: 2px !important;
+}
+
+.gjs-pn-btn:hover {
+    color: #f1f5f9 !important;
+    background-color: #334155 !important;
+}
+
+.gjs-pn-btn.gjs-pn-active {
+    color: #3b82f6 !important;
+    background-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+/* ============================================
+   BLOCKS PANEL
+   ============================================ */
+
+.gjs-blocks-c {
+    background-color: transparent !important;
+    padding: 8px !important;
+}
+
+.gjs-block {
+    background-color: #334155 !important;
+    border: 1px solid #475569 !important;
+    border-radius: 8px !important;
+    color: #e2e8f0 !important;
+    margin: 4px !important;
+    padding: 12px 8px !important;
+    min-height: 60px !important;
+    transition: all 0.2s ease !important;
+}
+
+.gjs-block:hover {
+    background-color: #475569 !important;
+    border-color: #3b82f6 !important;
+}
+
+.gjs-block svg {
+    fill: #94a3b8 !important;
+}
+
+.gjs-block:hover svg {
+    fill: #e2e8f0 !important;
+}
+
+.gjs-block-label {
+    color: #cbd5e1 !important;
+    font-size: 11px !important;
+    margin-top: 6px !important;
+}
+
+.gjs-block-category {
+    background-color: transparent !important;
+}
+
+.gjs-block-category .gjs-title {
+    background-color: #0f172a !important;
+    color: #e2e8f0 !important;
+    font-weight: 600 !important;
+    padding: 10px 12px !important;
+    border-radius: 6px 6px 0 0 !important;
+}
+
+.gjs-block-category .gjs-caret-icon {
+    color: #94a3b8 !important;
+}
+
+/* ============================================
+   LAYER MANAGER
+   ============================================ */
+
+.gjs-layers {
+    background-color: transparent !important;
+}
+
+.gjs-layer {
+    background-color: transparent !important;
+}
+
+.gjs-layer-title {
+    background-color: #334155 !important;
+    border-radius: 6px !important;
+    margin: 2px 4px !important;
+    color: #e2e8f0 !important;
+}
+
+.gjs-layer-title:hover {
+    background-color: #475569 !important;
+}
+
+.gjs-layer-name {
+    color: #e2e8f0 !important;
+}
+
+.gjs-layer.gjs-selected .gjs-layer-title {
+    background-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+/* ============================================
+   STYLE MANAGER
+   ============================================ */
+
+.gjs-sm-sectors {
+    background-color: transparent !important;
+}
+
+.gjs-sm-sector {
+    background-color: transparent !important;
+    margin-bottom: 4px !important;
+}
+
+.gjs-sm-sector-title {
+    background-color: #0f172a !important;
+    color: #e2e8f0 !important;
+    font-weight: 600 !important;
+    padding: 10px 12px !important;
+    border-radius: 6px !important;
+}
+
+.gjs-sm-properties {
+    background-color: #1e293b !important;
+    padding: 8px !important;
+    border-radius: 0 0 6px 6px !important;
+}
+
+.gjs-sm-label {
+    color: #94a3b8 !important;
+    font-size: 11px !important;
+}
+
+.gjs-field {
+    background-color: #334155 !important;
+    border: 1px solid #475569 !important;
+    border-radius: 6px !important;
+    color: #e2e8f0 !important;
+}
+
+.gjs-field:focus-within {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2) !important;
+}
+
+.gjs-field input,
+.gjs-field select {
+    color: #e2e8f0 !important;
+    background-color: transparent !important;
+}
+
+/* ============================================
+   SELECTOR MANAGER
+   ============================================ */
+
+.gjs-clm-tags {
+    background-color: #1e293b !important;
+    border-radius: 6px !important;
+    padding: 8px !important;
+}
+
+.gjs-clm-tag {
+    background-color: #3b82f6 !important;
+    color: white !important;
+    border-radius: 4px !important;
+}
+
+/* ============================================
+   TRAIT MANAGER
+   ============================================ */
+
+.gjs-trt-traits {
+    background-color: transparent !important;
+}
+
+.gjs-trt-trait {
+    background-color: transparent !important;
+    padding: 8px !important;
+}
+
+.gjs-trt-trait .gjs-label {
+    color: #94a3b8 !important;
+}
+
+/* ============================================
+   MODAL
+   ============================================ */
+
+.gjs-mdl-dialog {
+    background-color: #1e293b !important;
+    border-radius: 12px !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.gjs-mdl-header {
+    background-color: #0f172a !important;
+    border-radius: 12px 12px 0 0 !important;
+    color: #f1f5f9 !important;
+}
+
+.gjs-mdl-title {
+    font-weight: 600 !important;
+}
+
+.gjs-mdl-btn-close {
+    color: #94a3b8 !important;
+}
+
+.gjs-mdl-btn-close:hover {
+    color: #f1f5f9 !important;
+}
+
+.gjs-mdl-content {
+    background-color: #1e293b !important;
+    color: #e2e8f0 !important;
+}
+
+/* ============================================
+   TOOLBAR (on selected element)
+   ============================================ */
+
+.gjs-toolbar {
+    background-color: #1e293b !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+.gjs-toolbar-item {
+    color: #e2e8f0 !important;
+}
+
+.gjs-toolbar-item:hover {
+    color: #3b82f6 !important;
+}
+
+/* ============================================
+   BADGE & HIGHLIGHTER
+   ============================================ */
+
+.gjs-badge {
+    background-color: #3b82f6 !important;
+    color: #ffffff !important;
+    border-radius: 4px !important;
+    font-weight: 500 !important;
+}
+
+.gjs-highlighter {
+    outline: 2px solid #3b82f6 !important;
+}
+
+.gjs-placeholder {
+    border: 2px dashed #3b82f6 !important;
+    background-color: rgba(59, 130, 246, 0.1) !important;
+}
+
+/* ============================================
+   RESIZER
+   ============================================ */
+
+.gjs-resizer-h {
+    border: 2px solid #3b82f6 !important;
+    background-color: #1e293b !important;
+}
+
+/* ============================================
+   SCROLLBARS
+   ============================================ */
+
+#gjs-blocks-container::-webkit-scrollbar,
+#gjs-styles-container::-webkit-scrollbar,
+#gjs-layers-container::-webkit-scrollbar,
+.gjs-blocks-c::-webkit-scrollbar,
+.gjs-layers::-webkit-scrollbar,
+.gjs-sm-sectors::-webkit-scrollbar {
+    width: 6px;
+}
+
+#gjs-blocks-container::-webkit-scrollbar-track,
+#gjs-styles-container::-webkit-scrollbar-track,
+#gjs-layers-container::-webkit-scrollbar-track,
+.gjs-blocks-c::-webkit-scrollbar-track,
+.gjs-layers::-webkit-scrollbar-track,
+.gjs-sm-sectors::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+#gjs-blocks-container::-webkit-scrollbar-thumb,
+#gjs-styles-container::-webkit-scrollbar-thumb,
+#gjs-layers-container::-webkit-scrollbar-thumb,
+.gjs-blocks-c::-webkit-scrollbar-thumb,
+.gjs-layers::-webkit-scrollbar-thumb,
+.gjs-sm-sectors::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 3px;
+}
+
+#gjs-blocks-container::-webkit-scrollbar-thumb:hover,
+#gjs-styles-container::-webkit-scrollbar-thumb:hover,
+#gjs-layers-container::-webkit-scrollbar-thumb:hover,
+.gjs-blocks-c::-webkit-scrollbar-thumb:hover,
+.gjs-layers::-webkit-scrollbar-thumb:hover,
+.gjs-sm-sectors::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* ============================================
+   FIX: Ensure container panels work
+   ============================================ */
+
+#gjs-blocks-container,
+#gjs-styles-container,
+#gjs-layers-container,
+#gjs-traits-container {
+    min-height: 100px;
+}
+
+#gjs-blocks-container .gjs-blocks-c,
+#gjs-styles-container .gjs-sm-sectors,
+#gjs-layers-container .gjs-layers {
+    height: auto !important;
+    overflow: visible !important;
+}
+
+/* ============================================
+   FULLSCREEN MODE FIX
+   ============================================ */
+
+/* When GrapesJS is in fullscreen, make canvas fill ALL available space */
+.gjs-editor-canvas .gjs-cv-canvas {
+    width: 100% !important;
+}
+
+/* GrapesJS fullscreen class */
+.gjs-editor.fullscreen,
+.gjs-editor.gjs-editor-fullscreen {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 9999 !important;
+    background-color: #374151 !important;
+}
+
+.gjs-editor.fullscreen .gjs-cv-canvas,
+.gjs-editor.gjs-editor-fullscreen .gjs-cv-canvas {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    left: 0 !important;
+}
+
+/* Canvas frames in fullscreen */
+.gjs-editor.fullscreen .gjs-cv-canvas__frames,
+.gjs-editor.gjs-editor-fullscreen .gjs-cv-canvas__frames {
+    width: 100% !important;
+}
+
+/* Frame wrapper in fullscreen */
+.gjs-editor.fullscreen .gjs-frame-wrapper,
+.gjs-editor.gjs-editor-fullscreen .gjs-frame-wrapper {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* Preview mode */
+.gjs-editor.gjs-preview-mode .gjs-cv-canvas {
+    width: 100% !important;
+    left: 0 !important;
+}
+
+/* ============================================
+   ADDITIONAL BLOCK CATEGORIES
+   ============================================ */
+
+.gjs-block-categories {
+    margin-bottom: 8px;
+}
+
+.gjs-block-category {
+    margin-bottom: 4px !important;
+}
+
+/* ============================================
+   ENSURE CANVAS TAKES FULL WIDTH
+   ============================================ */
+
+/* Override any left padding/margin on canvas */
+.gjs-cv-canvas {
+    left: 0 !important;
+    max-width: 100% !important;
+}
+
+/* Ensure frame wrapper doesn't have extra margins */
+.gjs-frame-wrapper--anim {
+    width: 100% !important;
+}

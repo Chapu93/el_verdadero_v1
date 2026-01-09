@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SaaS Landing Page</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3713ec",
+                        "primary-dark": "#2a0eb5",
+                        "background-light": "#f8fafc", /* Slate 50 */
+                        "background-dark": "#0f172a", /* Slate 900 */
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e293b",
+                        "text-main": "#0f172a",
+                        "text-muted": "#64748b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem", 
+                        "lg": "0.75rem", 
+                        "xl": "1rem", 
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        "soft": "0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)",
+                        "hover": "0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main antialiased selection:bg-primary selection:text-white">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 bg-surface-light/80 backdrop-blur-md dark:border-slate-800 dark:bg-surface-dark/80">
+<div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-2">
+<div class="flex size-8 items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined text-2xl">grid_view</span>
+</div>
+<span class="text-lg font-bold tracking-tight text-slate-900 dark:text-white">VerticalSaaS</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white transition-colors" href="#">Producto</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white transition-colors" href="#">Soluciones</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white transition-colors" href="#">Precios</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden text-sm font-medium text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white md:block">
+                        Iniciar Sesión
+                    </button>
+<button class="rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-primary-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                        Comenzar Gratis
+                    </button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative py-20 lg:py-32 overflow-hidden">
+<div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-100 via-background-light to-background-light dark:from-indigo-950/30 dark:to-background-dark"></div>
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+<div class="mx-auto max-w-3xl flex flex-col gap-6 items-center">
+<div class="inline-flex items-center rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-sm font-medium text-primary dark:border-indigo-900 dark:bg-indigo-950/50 dark:text-indigo-300">
+<span class="flex h-2 w-2 rounded-full bg-primary mr-2"></span>
+                            Nuevo: Dashboard 2.0 disponible
+                        </div>
+<h1 class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white">
+                            Moderniza tu negocio y adquiri tu propia <span class="text-primary">página web</span>
+</h1>
+<p class="mx-auto max-w-2xl text-lg text-slate-600 dark:text-slate-300">
+                            La plataforma todo en uno para llevar tu empresa al siguiente nivel digital sin complicaciones técnicas. Gestiona, vende y crece desde un solo lugar.
+                        </p>
+<div class="mt-4 flex w-full flex-col items-center justify-center gap-3 sm:flex-row">
+<button class="w-full rounded-lg bg-primary px-8 py-3.5 text-base font-bold text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-primary-dark hover:shadow-indigo-500/40 sm:w-auto">
+                                Comenzar Gratis
+                            </button>
+<button class="w-full rounded-lg border border-slate-200 bg-white px-8 py-3.5 text-base font-bold text-slate-700 shadow-sm transition-all hover:bg-slate-50 hover:text-slate-900 sm:w-auto dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700">
+                                Ver Demo
+                            </button>
+</div>
+<div class="mt-12 w-full rounded-2xl border border-slate-200 bg-white p-2 shadow-2xl dark:border-slate-700 dark:bg-slate-800">
+<div class="aspect-[16/9] w-full overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-900 relative">
+<img alt="SaaS Dashboard displaying analytics graphs and charts on a clean interface" class="h-full w-full object-cover" data-alt="Abstract representation of a modern dashboard with graphs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqd05K6I4Du47rasQQ38BbQ5tL3IhFiuL_hCj46QrlgpU60oevnm1H3KQsLWMtBXYss3U6tgIAJSfIDB7s5XJVFWTJ64SZiMFUrBF4gMf1p5GhjriHpv7es8rRQVEA7Q3eOLBpVBnPezcUxz8EIUQ6t33ppHBNQ2ZL57u6gVQgPF30y1MS2nYq1yCytgrbzBog8JhqYsp7J1o2kadCccEI5hREBdST3-7IrZBNvwHFzpB5AqjbDecAjKrVyap-0HFuYhu0NokjfV-H"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Problem/Solution Section -->
+<section class="py-20 bg-white dark:bg-surface-dark">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="mb-16 text-center">
+<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+                            Soluciones a tus problemas
+                        </h2>
+<p class="mt-4 text-lg text-slate-600 dark:text-slate-400">
+                            Entendemos los retos de digitalizar tu negocio. Así es como los resolvemos.
+                        </p>
+</div>
+<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+<!-- Card 1 -->
+<div class="group relative rounded-xl border border-slate-200 bg-background-light p-8 transition-all hover:-translate-y-1 hover:shadow-hover dark:border-slate-700 dark:bg-slate-800/50">
+<div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-100 text-primary dark:bg-indigo-900/50 dark:text-indigo-300">
+<span class="material-symbols-outlined text-2xl">visibility_off</span>
+</div>
+<h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">Baja Visibilidad</h3>
+<p class="text-slate-600 dark:text-slate-400">
+                                Pasa de ser invisible a tener páginas optimizadas para SEO automáticamente. Te encontrarán más rápido.
+                            </p>
+</div>
+<!-- Card 2 -->
+<div class="group relative rounded-xl border border-slate-200 bg-background-light p-8 transition-all hover:-translate-y-1 hover:shadow-hover dark:border-slate-700 dark:bg-slate-800/50">
+<div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-100 text-primary dark:bg-indigo-900/50 dark:text-indigo-300">
+<span class="material-symbols-outlined text-2xl">build</span>
+</div>
+<h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">Dolores Técnicos</h3>
+<p class="text-slate-600 dark:text-slate-400">
+                                Olvídate del código y servidores. Nuestra solución No-Code se encarga de todo el mantenimiento técnico.
+                            </p>
+</div>
+<!-- Card 3 -->
+<div class="group relative rounded-xl border border-slate-200 bg-background-light p-8 transition-all hover:-translate-y-1 hover:shadow-hover dark:border-slate-700 dark:bg-slate-800/50">
+<div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-100 text-primary dark:bg-indigo-900/50 dark:text-indigo-300">
+<span class="material-symbols-outlined text-2xl">trending_down</span>
+</div>
+<h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">Ventas Lentas</h3>
+<p class="text-slate-600 dark:text-slate-400">
+                                Integra pasarelas de pago al instante y empieza a cobrar hoy mismo con nuestro checkout optimizado.
+                            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-20 bg-background-light dark:bg-background-dark">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="mb-16 text-center">
+<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+                            Precios simples y transparentes
+                        </h2>
+<p class="mt-4 text-lg text-slate-600 dark:text-slate-400">
+                            Elige el plan que mejor se adapte a la etapa de tu negocio.
+                        </p>
+</div>
+<div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-8 items-start">
+<!-- Basic Plan -->
+<div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-700 dark:bg-surface-dark">
+<h3 class="text-lg font-semibold text-slate-900 dark:text-white">Básico</h3>
+<p class="mt-4 flex items-baseline">
+<span class="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">$0</span>
+<span class="ml-1 text-base font-medium text-slate-500">/mes</span>
+</p>
+<p class="mt-2 text-sm text-slate-500">Para empezar a validar tu idea.</p>
+<button class="mt-6 w-full rounded-lg bg-slate-100 px-4 py-2.5 text-sm font-bold text-slate-900 hover:bg-slate-200 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700 transition-colors">
+                                Empezar Gratis
+                            </button>
+<ul class="mt-6 space-y-4">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-green-500 mr-3">check_circle</span>
+<span class="text-sm text-slate-600 dark:text-slate-300">Sitio web básico</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-green-500 mr-3">check_circle</span>
+<span class="text-sm text-slate-600 dark:text-slate-300">Dominio compartido</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-green-500 mr-3">check_circle</span>
+<span class="text-sm text-slate-600 dark:text-slate-300">Soporte por email</span>
+</li>
+</ul>
+</div>
+<!-- Pro Plan (Highlighted) -->
+<div class="relative rounded-2xl border-2 border-primary bg-white p-8 shadow-xl dark:border-primary dark:bg-surface-dark transform scale-100 lg:-translate-y-4">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                                Más Popular
+                            </div>
+<h3 class="text-lg font-semibold text-slate-900 dark:text-white">Pro</h3>
+<p class="mt-4 flex items-baseline">
+<span class="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">$29</span>
+<span class="ml-1 text-base font-medium text-slate-500">/mes</span>
+</p>
+<p class="mt-2 text-sm text-slate-500">Todo lo necesario para crecer.</p>
+<button class="mt-6 w-full rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white hover:bg-primary-dark shadow-lg shadow-indigo-500/20 transition-colors">
+                                Prueba Pro 14 días
+                            </button>
+<ul class="mt-6 space-y-4">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-3">check_circle</span>
+<span class="text-sm font-medium text-slate-900 dark:text-white">Dominio personalizado</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-3">check_circle</span>
+<span class="text-sm font-medium text-slate-900 dark:text-white">Analíticas avanzadas</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-3">check_circle</span>
+<span class="text-sm font-medium text-slate-900 dark:text-white">Soporte prioritario 24/7</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-3">check_circle</span>
+<span class="text-sm font-medium text-slate-900 dark:text-white">Pasarela de pagos 0% comisión</span>
+</li>
+</ul>
+</div>
+<!-- Enterprise Plan -->
+<div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-700 dark:bg-surface-dark">
+<h3 class="text-lg font-semibold text-slate-900 dark:text-white">Enterprise</h3>
+<p class="mt-4 flex items-baseline">
+<span class="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">$99</span>
+<span class="ml-1 text-base font-medium text-slate-500">/mes</span>
+</p>
+<p class="mt-2 text-sm text-slate-500">Para grandes volúmenes.</p>
+<button class="mt-6 w-full rounded-lg bg-slate-100 px-4 py-2.5 text-sm font-bold text-slate-900 hover:bg-slate-200 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700 transition-colors">
+                                Contactar Ventas
+                            </button>
+<ul class="mt-6 space-y-4">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-green-500 mr-3">check_circle</span>
+<span class="text-sm text-slate-600 dark:text-slate-300">API de acceso total</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-green-500 mr-3">check_circle</span>
+<span class="text-sm text-slate-600 dark:text-slate-300">SLA garantizado 99.9%</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-green-500 mr-3">check_circle</span>
+<span class="text-sm text-slate-600 dark:text-slate-300">Gerente de cuenta dedicado</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 relative overflow-hidden bg-white dark:bg-surface-dark">
+<div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+                        ¿Listo para crecer tu negocio?
+                    </h2>
+<p class="mt-4 text-lg text-slate-600 dark:text-slate-400">
+                        Únete a cientos de negocios que ya están transformando su presencia digital.
+                    </p>
+<div class="mt-8 flex justify-center gap-4">
+<button class="rounded-lg bg-primary px-8 py-3 text-base font-bold text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-primary-dark hover:shadow-indigo-500/40">
+                            Comenzar Gratis ahora
+                        </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-slate-200 bg-white py-12 dark:border-slate-800 dark:bg-surface-dark">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+<div class="col-span-2 md:col-span-1">
+<div class="flex items-center gap-2 mb-4">
+<div class="flex size-6 items-center justify-center rounded bg-primary text-white">
+<span class="material-symbols-outlined text-sm">grid_view</span>
+</div>
+<span class="text-base font-bold text-slate-900 dark:text-white">VerticalSaaS</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">
+                            Empoderando negocios con tecnología simple y potente.
+                        </p>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-slate-900 dark:text-white">Producto</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-white" href="#">Características</a></li>
+<li><a class="text-sm text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-white" href="#">Precios</a></li>
+<li><a class="text-sm text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-white" href="#">Showcase</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-slate-900 dark:text-white">Compañía</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-white" href="#">Sobre nosotros</a></li>
+<li><a class="text-sm text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-white" href="#">Blog</a></li>
+<li><a class="text-sm text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-white" href="#">Contacto</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-slate-900 dark:text-white">Legal</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-white" href="#">Términos</a></li>
+<li><a class="text-sm text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-white" href="#">Privacidad</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 border-t border-slate-100 pt-8 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm text-slate-500 dark:text-slate-400">© 2023 VerticalSaaS Inc. Todos los derechos reservados.</p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-slate-600 dark:hover:text-white" href="#">
+<span class="sr-only">Twitter</span>
+<!-- Twitter Icon placeholder -->
+<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+</a>
+<a class="text-slate-400 hover:text-slate-600 dark:hover:text-white" href="#">
+<span class="sr-only">GitHub</span>
+<!-- GitHub Icon placeholder -->
+<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
